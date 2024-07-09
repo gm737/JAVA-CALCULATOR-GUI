@@ -10,3 +10,7 @@ To start the calculator, simply run the main file.
 The functions in the GUI are the same as on a physical calculator, where you can add, subtract, divide or multiply.
 
 ![GUI](https://github.com/gm737/JAVA-CALCULATOR-GUI/assets/174362613/d726fc78-59b8-4d9e-8bfc-bdc689427e1d)
+
+
+You also have the options to write decimal and negative numbers or to delete and clear numbers.
+
