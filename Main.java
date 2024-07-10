@@ -1,9 +1,8 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import jdk.jshell.Snippet;
 
-public class Calculator implements ActionListener {
+public class Main implements ActionListener {
 
     JFrame frame;
     JTextField textfield;
@@ -18,7 +17,7 @@ public class Calculator implements ActionListener {
     double num1=0,num2=0,result=0;
     char operator;
 
-    Calculator(){
+    Main(){
 
         frame = new JFrame("Calculator");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -28,7 +27,7 @@ public class Calculator implements ActionListener {
         textfield = new JTextField();
         textfield.setBounds(50, 25, 300, 50);
         textfield.setFont(myFont);
-        //textfield.setEditable(false);
+   
 
         addButton = new JButton("+");
         subButton = new JButton("-");
@@ -98,7 +97,7 @@ public class Calculator implements ActionListener {
         frame.setVisible(true);
     }
     public static void main(String[] args) {
-        Calculator calc = new Calculator();
+        Main calc = new Main();
     }
     @Override
     public void actionPerformed(ActionEvent e){
@@ -117,7 +116,8 @@ public class Calculator implements ActionListener {
         if(e.getSource()==addButton){
             num1 = Double.parseDouble(textfield.getText());
             operator='+';
-            textfield.setText("");
+            textfield.setText( " ");
+
         }
 
         if(e.getSource()==subButton){
@@ -140,7 +140,7 @@ public class Calculator implements ActionListener {
 
         if(e.getSource()==equButton){
             num2 = Double.parseDouble(textfield.getText());
-       
+           
 
         switch(operator){
             case'+':
